@@ -1,0 +1,10 @@
+CHANGES
+Logical.xs
+Makefile.PL
+MANIFEST
+ppport.h
+readme
+t/vms-Logical.t
+lib/vms/Logical.pm
+META.yml                                 Module meta-data (added by MakeMaker)
+META.yml                                 Module meta-data (added by MakeMaker)
