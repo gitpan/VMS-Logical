@@ -6,9 +6,10 @@ use AutoLoader qw(AUTOLOAD);
 require Exporter;
 our @ISA = qw(Exporter);
 
-our $VERSION = '0.4';
+our $VERSION = '0.5';
 our @EXPORT = ();
 our @EXPORT_OK = qw(translate getlogical define deassign create_table);
+our %EXPORT_TAGS = (all => [ @EXPORT_OK ] );
 
 require XSLoader;
 XSLoader::load('VMS::Logical', $VERSION);
@@ -27,7 +28,7 @@ VMS::Logical - OpenVMS Logical name interface
 
 =head1 SYNOPSIS
 
-  use VMS::Logical qw(translate getlogical define deassign create_table);
+  use VMS::Logical qw(:all);
 
   $hashref = translate({lognam='sys$sysdevice',
                         case_blind=>1});
@@ -277,8 +278,8 @@ Don't copy the table to subprocesses.
 
 =head1 SEE ALSO
 
-'HP OpenVMS Programming Concepts Manual' contains a chapter about logical
-names and logical name tables.
+'HP OpenVMS Programming Concepts Manual' contains a chapter about
+logical names and logical name tables.
 
 'HP OpenVMS System Services Reference Manual' provides detailed
 information about the OpenVMS logical name system services.
@@ -289,11 +290,17 @@ Thomas Pfau, E<lt> tfpfau@gmail.com E<gt>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (C) 2008,2009 by Thomas Pfau
+Copyright (C) 2008,2009,2012 by Thomas Pfau
 
-This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself.
+This [library|program|code|module] is free software; you
+can redistribute it and/or modify it under the terms of the
+Artistic License 2.0. For details, see the full text of the
+license in the file LICENSE.
 
+This program is distributed in the hope that it will be
+useful, but it is provided "as is" and without any express
+or implied warranties. For details, see the full text of
+the license in the file LICENSE.
 
 =cut
 

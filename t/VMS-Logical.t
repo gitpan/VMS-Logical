@@ -4,7 +4,7 @@ use Data::Dumper;
 use constant TABLE_NAME => 'VMS_LOGICAL_TABLE';
 use constant LOGICAL_NAME => 'VMS_LOGICAL_TEST';
 
-use Test::More tests => 22;
+use Test::More tests => 23;
 BEGIN { use_ok('VMS::Logical') };
 
 #########################
@@ -21,9 +21,9 @@ ok($x eq TABLE_NAME, 'create table: returns table name');
 
 # define a logical in it
 $x = VMS::Logical::define({lognam=>LOGICAL_NAME,
-                              acmode=>'SUPERVISOR',
-                              table=>TABLE_NAME,
-                              equiv=>[{string=>$time}]});
+			   acmode=>'SUPERVISOR',
+			   table=>TABLE_NAME,
+			   equiv=>[{string=>$time}]});
 ok(defined($x), 'define logical: returns a value');
 ok($x eq TABLE_NAME, 'define logical: returns table name');
 
@@ -38,6 +38,7 @@ ok(exists($x->{table}), 'translate: table name returned');
 ok($x->{table} eq TABLE_NAME, 'translate: correct table');
 ok(exists($x->{equiv}), 'translate: equivalences returned');
 ok(ref($x->{equiv}) eq 'ARRAY', 'translate: equivalence is array');
+ok(@{$x->{equiv}} == 1, 'translate: equivalence array has one entry');
 ok(ref($x->{equiv}[0]) eq 'HASH', 'translate: first equivalence is a hash');
 ok(exists($x->{equiv}[0]{string}), 'translate: equiv hash returns string');
 ok($x->{equiv}[0]{string} eq $time, 'translate: string is correct');

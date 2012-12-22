@@ -1,5 +1,10 @@
 Revision history for Perl extension VMS::Logical.
 
+0.5  Dec 21, 2012
+	- mostly cosmetic changes
+
+	- added LICENSE file
+
 0.4  Jun 27, 2009
 	- updated author email address
 

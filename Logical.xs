@@ -1,6 +1,6 @@
 /*
 
-Copyright (C) 2008 by Thomas Pfau < pfau@nbpfaus.net >
+Copyright (C) 2008, 2009, 2012 by Thomas Pfau < tfpfau@gmail.com >
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
@@ -131,7 +131,7 @@ int *get_hash_int(HV *hv, const char *key)
     return i;
 }
 
-/* find the specified access mode an return its index */
+/* find the specified access mode and return its index */
 int find_access_mode(SV *sv)
 {
     int i;
@@ -334,6 +334,7 @@ translate(lnm)
   OUTPUT:
     RETVAL
 
+# define a logical name
 SV *
 define(lnm)
     SV *lnm
@@ -453,6 +454,7 @@ define(lnm)
   OUTPUT:
     RETVAL
 
+# deassign a logical name
 SV *
 deassign(lnm)
     SV *lnm
@@ -489,6 +491,7 @@ deassign(lnm)
   OUTPUT:
     RETVAL
 
+# create a logical name table
 SV *
 create_table(lnm)
     SV *lnm
