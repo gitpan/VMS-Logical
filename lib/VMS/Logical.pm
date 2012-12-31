@@ -6,7 +6,7 @@ use AutoLoader qw(AUTOLOAD);
 require Exporter;
 our @ISA = qw(Exporter);
 
-our $VERSION = '0.5';
+our $VERSION = '0.6';
 our @EXPORT = ();
 our @EXPORT_OK = qw(translate getlogical define deassign create_table);
 our %EXPORT_TAGS = (all => [ @EXPORT_OK ] );
@@ -299,8 +299,7 @@ license in the file LICENSE.
 
 This program is distributed in the hope that it will be
 useful, but it is provided "as is" and without any express
-or implied warranties. For details, see the full text of
-the license in the file LICENSE.
+or implied warranties.b
 
 =cut
 

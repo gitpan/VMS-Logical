@@ -1,6 +1,6 @@
 VMS-Logical is Copyright (C) 2008,2009,2012, Thomas Pfau
 
-VMS-Logical version 0.5
+VMS-Logical version 0.6
 =======================
 
 VMS::Logical provides an interface for creating and accessing detailed
@@ -30,6 +30,5 @@ license in the file LICENSE.
 
 This program is distributed in the hope that it will be
 useful, but it is provided "as is" and without any express
-or implied warranties. For details, see the full text of
-the license in the file LICENSE.
+or implied warranties.
 

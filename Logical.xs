@@ -2,8 +2,12 @@
 
 Copyright (C) 2008, 2009, 2012 by Thomas Pfau < tfpfau@gmail.com >
 
-This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself.
+This module is free software.  You can redistribute it and/or modify
+it under the terms of the Artistic License 2.0.  For details, see the
+full text of the Artistic License in the file LICENSE.
+
+This module is distributed in the hope that it will be useful but it
+is provided "as is"and without any express or implied warranties.
 
 */
 

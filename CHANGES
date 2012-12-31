@@ -1,5 +1,11 @@
 Revision history for Perl extension VMS::Logical.
 
+0.6  Dec 31, 2012
+	- replaced LICENSE file with corrected version.
+
+	- Makefile.PL now searches for SYS$SHARE:CMSSHR.EXE and aborts
+	if not found.
+
 0.5  Dec 21, 2012
 	- mostly cosmetic changes
 
